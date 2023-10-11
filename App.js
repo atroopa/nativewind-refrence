@@ -1,14 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text, View } from 'react-native';
+import store from './context/store';
+import { Provider } from 'react-redux';
+import Counter from './components/Counter';
 
 export default function App() {
   return (
-    
-    <View className="flex-1 items-center justify-center bg-white">
-        <Text className="text-black"> my proejct</Text>
-        <StatusBar style="auto" />
-      </View>
+    <Provider store={store}>
+      <Counter/>
+    </Provider>
+
     
   );
 }
